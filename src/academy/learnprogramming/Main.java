@@ -9,7 +9,7 @@ public class Main {
         int count;
         System.out.print("How many number : ");
         count = scanner.nextInt();
-        System.out.println("--------------------");
+        System.out.println("--------------------------");
         //readIntegers(count);
         findMin(readIntegers(count));
     }
@@ -22,7 +22,7 @@ public class Main {
             numbersEntered[i] = scanner.nextInt();
         }
 
-        System.out.println("--------------------");
+        System.out.println("--------------------------");
 
         for (int i=0; i<numbersEntered.length; i++) {
             System.out.println("Number in array [" + i + "] = " + numbersEntered[i]);
@@ -33,12 +33,12 @@ public class Main {
     public static void findMin(int[] array) {
         int[] arrayCheck = array;
         int minimum = arrayCheck[0];
-        for (int i=0; i<arrayCheck.length-1; i++) {
-            if (arrayCheck[i] < arrayCheck[i+1]) {
+        for (int i=0; i<arrayCheck.length; i++) {
+            if (minimum > arrayCheck[i]) {
                 minimum = arrayCheck[i];
             }
         }
-        System.out.println("--------------------");
+        System.out.println("--------------------------");
         System.out.println("Minimum number : " + minimum);
     }
 }
