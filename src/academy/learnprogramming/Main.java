@@ -4,18 +4,19 @@ import java.util.Scanner;
 
 public class Main {
 
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
         int count;
         System.out.print("How many number : ");
         count = scanner.nextInt();
         System.out.println("--------------------------");
-        //readIntegers(count);
         findMin(readIntegers(count));
     }
 
     public static int[] readIntegers(int count) {
-        Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
         int[] numbersEntered = new int[count];
         for (int i=0; i<numbersEntered.length; i++) {
             System.out.print("Number #" + (i+1) + " : ");
