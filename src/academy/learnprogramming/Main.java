@@ -15,12 +15,14 @@ public class Main {
         findMin(readIntegers(count));
     }
 
-    public static int[] readIntegers(int count) {
+    private static int[] readIntegers(int count) {
         //Scanner scanner = new Scanner(System.in);
         int[] numbersEntered = new int[count];
         for (int i=0; i<numbersEntered.length; i++) {
             System.out.print("Number #" + (i+1) + " : ");
-            numbersEntered[i] = scanner.nextInt();
+            int number = scanner.nextInt();
+            scanner.nextLine();
+            numbersEntered[i] = number;
         }
 
         System.out.println("--------------------------");
@@ -31,9 +33,9 @@ public class Main {
         return numbersEntered;
     }
 
-    public static void findMin(int[] array) {
+    private static int findMin(int[] array) {
         int[] arrayCheck = array;
-        int minimum = arrayCheck[0];
+        int minimum = Integer.MAX_VALUE;
         for (int i=0; i<arrayCheck.length; i++) {
             if (minimum > arrayCheck[i]) {
                 minimum = arrayCheck[i];
@@ -41,5 +43,7 @@ public class Main {
         }
         System.out.println("--------------------------");
         System.out.println("Minimum number : " + minimum);
+
+        return minimum;
     }
 }
